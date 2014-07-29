@@ -14,24 +14,7 @@
 		});
 	};
 
-	// Append caption after pictures
-	var appendCaption = function(){
-		$('.entry-content').each(function(i){
-			var _i = i;
-			$(this).find('img').each(function(){
-				var alt = this.alt;
-
-				if (alt != ''){
-					$(this).after('<span class="caption">'+alt+'</span>');
-				}
-
-				$(this).wrap('<a href="'+this.src+'" title="'+alt+'" class="fancybox" rel="gallery'+_i+'" />');
-			});
-		});
-	};
-
 	externalLinks(); // Delete or comment this line to disable opening external links in new window
-	appendCaption(); // Delete or comment this line to disable caption
 
 	var mobilenav = $('#mobile-nav');
 
